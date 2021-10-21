@@ -8,6 +8,11 @@ const Routes = [
         component: Users,
     },
     {
+        path: '/users',
+        exact: true,
+        component: Users,
+    },
+    {
         path: '/homes',
         component: Homes,
     },
