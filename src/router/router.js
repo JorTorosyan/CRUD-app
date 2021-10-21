@@ -1,5 +1,6 @@
 import Users from "../pages/users";
 import Homes from "../pages/homes";
+import CreateUsers from "../pages/users/create";
 
 const Routes = [
     {
@@ -15,6 +16,10 @@ const Routes = [
     {
         path: '/homes',
         component: Homes,
+    },
+    {
+        path: '/users/create',
+        component: CreateUsers,
     },
 ];
 

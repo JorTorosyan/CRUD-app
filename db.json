@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "Zhora",
+      "lastName": "Torosyan",
+      "age": "27",
+      "email": "zhora@gmail.com",
+      "password": "zhora123456"
+    },
+    {
+      "id": "f1e64b3b-62b1-41cc-a448-bb490bfdc938",
+      "firstName": "User 1 Name",
+      "lastName": "User 1 Surname",
+      "age": "19",
+      "email": "user1@mail.com",
+      "password": "user777"
+    }
+  ],
+  "homes": [
+    {
+      "id": "1",
+      "title": "a",
+      "location": "a",
+      "land": "33",
+      "place": "a",
+      "bedrooms": "a"
+    }
+  ]
+}
