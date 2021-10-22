@@ -41,9 +41,6 @@ const CreateUsers = () => {
         }
         const response = await api.post('/users',request);
 
-
-        console.log('rrrrrrrrrrrrr',response);
-
         if(response.data) {
             history.push('/users');
         }

@@ -18,13 +18,12 @@ const Users = () => {
 
         return response.data;
     }
+
     useEffect(() => {
 
         getUser();
 
     },[]);
-
-    console.log(users);
 
     const createUser = () => {
         history.push('/user/create');
@@ -33,7 +32,7 @@ const Users = () => {
     return (
         <div className="users">
             <div className="table">
-                <Table column1='First Name' column2='Last Name' column3='Age' column4='Email' column5='Password' data={users}/>
+                <Table column1='First Name' column2='Last Name' column3='Age' column4='Email' column5='Password' data={users} getUser={getUser}/>
             </div>
             <button className="create_button" onClick={ () => createUser() }>Create User</button>
         </div>

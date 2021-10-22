@@ -23,7 +23,7 @@ const Homes = () => {
     return (
         <div className="homes">
             <div className="table">
-                <Table column0='Owner' column1='Title' column2='Location' column3='Land' column4='Place' column5='Bedrooms' data={homes}/>
+                <Table column0='Owner' column1='Title' column2='Location' column3='Land' column4='Place' column5='Bedrooms' data={homes} getHomes={getHomes}/>
             </div>
             <button className="create_button" onClick={ () => createHome() }>Create Home</button>
         </div>

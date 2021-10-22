@@ -1,9 +1,23 @@
 import React from 'react';
 import DeleteIcon from '../../assets/images/delete.png';
 import EditIcon from '../../assets/images/edit.png';
+import api from "../../api/config";
+import {useHistory} from "react-router-dom";
 
-const Table = ({column0, column1, column2, column3, column4, column5, data}) => {
-    console.log(data)
+const Table = ({column0, column1, column2, column3, column4, column5, data, getUser, getHomes}) => {
+
+    const history = useHistory();
+    const location = history.location.pathname.slice(1);
+
+    const deleteUser = async (id) => {
+        await api.delete(`/users/${id}`);
+        getUser();
+    }
+    const deleteHome = async (id) => {
+        await api.delete(`/homes/${id}`);
+        getHomes();
+    }
+
     return (
         <div className="table">
             <table width="100%">
@@ -21,7 +35,7 @@ const Table = ({column0, column1, column2, column3, column4, column5, data}) => 
                 <tbody>
                     {data.map(item =>
                         <tr key={item.id}>
-                            <td style={{ display: item.title ? 'table-cell' : 'none' }}>{item.title && (
+                            <td style={{ display: item.owner ? 'table-cell' : 'none' }}>{item.owner && (
                                 item.owner
                             )}</td>
                             <td>{item.firstName ? item.firstName : item.title}</td>
@@ -30,7 +44,7 @@ const Table = ({column0, column1, column2, column3, column4, column5, data}) => 
                             <td>{item.email ? item.email : item.place}</td>
                             <td>{item.password ? item.password : item.bedroom}</td>
                             <td className="action">
-                                <button>
+                                <button onClick={ location === 'users' ? () => deleteUser(item.id) : () => deleteHome(item.id) }>
                                     <img src={DeleteIcon} alt=""/>
                                 </button>
                                 <button>

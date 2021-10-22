@@ -50,7 +50,7 @@ const CreateHomes = () => {
                 <label>
                     <select name="owner" onChange={handleChange}>
                         <option value="">Select Owner</option>
-                        {allUsers.map(user =>
+                        {allUsers && allUsers.map(user =>
                             <option value={user.firstName} key={user.id}>{user.firstName}</option>
                         )}
                     </select>
