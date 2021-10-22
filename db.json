@@ -28,12 +28,75 @@
   ],
   "homes": [
     {
-      "id": "1",
-      "title": "a",
-      "location": "a",
-      "land": "33",
-      "place": "a",
-      "bedrooms": "a"
+      "id": "fb39c2a3-8830-431d-82bc-58dcffde256e",
+      "title": "5t4t",
+      "location": "t45t",
+      "land": "t54t54",
+      "place": "t54t54",
+      "bedroom": "t5t54t"
+    },
+    {
+      "id": "993ea900-814a-4486-98f7-b1be9791d670",
+      "owner": "",
+      "title": "sa",
+      "location": "dasd",
+      "land": "dasd",
+      "place": "dasdsa",
+      "bedroom": "dasd"
+    },
+    {
+      "id": "ead30ddd-14b2-4a65-8908-2b2d7c02e880",
+      "owner": "",
+      "title": "",
+      "location": "",
+      "land": "",
+      "place": "",
+      "bedroom": ""
+    },
+    {
+      "id": "6103dc7d-1755-4fe3-8573-ffd9c484cd16",
+      "owner": "",
+      "title": "",
+      "location": "",
+      "land": "",
+      "place": "",
+      "bedroom": ""
+    },
+    {
+      "id": "7943e207-287f-4df5-a606-31693302aaaa",
+      "owner": "User 1 Name",
+      "title": "das",
+      "location": "das",
+      "land": "dasda",
+      "place": "asdasd",
+      "bedroom": "dasd"
+    },
+    {
+      "id": "7bde1e9c-77a6-4afd-979d-0cb69e48d557",
+      "owner": "",
+      "title": "das",
+      "location": "as",
+      "land": "asa",
+      "place": "as",
+      "bedroom": "as"
+    },
+    {
+      "id": "575e5869-406e-41ea-ab54-233d87d3ff7f",
+      "owner": "Zhora",
+      "title": "uuyk",
+      "location": "kyuk",
+      "land": "kyuk",
+      "place": "kyuky",
+      "bedroom": "kyu"
+    },
+    {
+      "id": "f5039bb2-ca2a-4999-bd29-0cd2921e8dd4",
+      "owner": "",
+      "title": "kuyk",
+      "location": "",
+      "land": "",
+      "place": "kuyk",
+      "bedroom": ""
     }
   ]
 }

@@ -1,6 +1,7 @@
 import Users from "../pages/users";
 import Homes from "../pages/homes";
 import CreateUsers from "../pages/users/create";
+import CreateHomes from "../pages/homes/create";
 
 const Routes = [
     {
@@ -18,8 +19,12 @@ const Routes = [
         component: Homes,
     },
     {
-        path: '/users/create',
+        path: '/user/create',
         component: CreateUsers,
+    },
+    {
+        path: '/home/create',
+        component: CreateHomes,
     },
 ];
 

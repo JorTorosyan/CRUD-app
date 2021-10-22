@@ -6,7 +6,7 @@ import {useDispatch} from "react-redux";
 import {allUsersReducer} from "../../redux/global.slice";
 
 const Users = () => {
-    const [users,setUsers] = useState([])
+    const [users,setUsers] = useState([]);
     const history = useHistory();
     const dispatch = useDispatch();
 
@@ -23,10 +23,13 @@ const Users = () => {
         getUser();
 
     },[]);
+
     console.log(users);
+
     const createUser = () => {
-        history.push('/users/create');
+        history.push('/user/create');
     }
+
     return (
         <div className="users">
             <div className="table">
