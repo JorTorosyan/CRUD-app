@@ -11,7 +11,9 @@ function App() {
   return (
       <div className="app">
           <Sidebar />
-          <Switch>{renderRoutes(Routes)}</Switch>
+          <div className="content">
+              <Switch>{renderRoutes(Routes)}</Switch>
+          </div>
       </div>
   );
 }

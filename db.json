@@ -15,6 +15,15 @@
       "age": "19",
       "email": "user1@mail.com",
       "password": "user777"
+    },
+    {
+      "id": "9471f045-da77-487b-9750-d3820577933d",
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "john@mail.com",
+      "age": "36",
+      "password": "12345678",
+      "confirmPassword": "12345678"
     }
   ],
   "homes": [

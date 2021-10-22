@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 // import {useDispatch} from "react-redux";
 // import {createUsersReducer} from "../../redux/global.slice";
 
-//Generated ID
+// Generated ID
 import {uuid} from "uuidv4";
 import api from '../../api/config'
 import {useHistory} from "react-router-dom";
@@ -51,44 +51,65 @@ const CreateUsers = () => {
     }
 
     return (
-        <div>
-            <input
-                type="text"
-                name="firstName"
-                value={state.firstName}
-                onChange={handleChange}
-            />
-            <input
-                type="text"
-                name="lastName"
-                value={state.lastName}
-                onChange={handleChange}
-            />
-            <input
-                type="email"
-                name="email"
-                value={state.email}
-                onChange={handleChange}
-            />
-            <input
-                type="text"
-                name="age"
-                value={state.age}
-                onChange={handleChange}
-            />
-            <input
-                type="password"
-                name="password"
-                value={state.password}
-                onChange={handleChange}
-            />
-            <input
-                type="password"
-                name="confirmPassword"
-                value={state.confirmPassword}
-                onChange={handleChange}
-            />
-            <button onClick={ () => createUser() }>Create User</button>
+        <div className="form">
+            <h3>Create a User</h3>
+            <div>
+                <label>
+                    <input
+                        type="text"
+                        name="firstName"
+                        placeholder="First Name"
+                        value={state.firstName}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    <input
+                        type="text"
+                        name="lastName"
+                        placeholder="Last Name"
+                        value={state.lastName}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        value={state.email}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    <input
+                        type="text"
+                        name="age"
+                        placeholder="Agg"
+                        value={state.age}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Type a password"
+                        value={state.password}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    <input
+                        type="password"
+                        name="confirmPassword"
+                        placeholder="Repeat password"
+                        value={state.confirmPassword}
+                        onChange={handleChange}
+                    />
+                </label>
+            </div>
+            <button className="create_button" onClick={ () => createUser() }>Create</button>
         </div>
     );
 }

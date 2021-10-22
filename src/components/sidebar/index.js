@@ -12,8 +12,14 @@ const Sidebar = () => {
 
     return (
         <div className="sidebar">
-            <button onClick={ () => usersPage() }>Users</button>
-            <button onClick={ () => homesPage() }>Homes</button>
+            <ul>
+                <li>
+                    <button onClick={ () => usersPage() }>Users</button>
+                </li>
+                <li>
+                    <button onClick={ () => homesPage() }>Homes</button>
+                </li>
+            </ul>
         </div>
     );
 }

@@ -30,9 +30,9 @@ const Users = () => {
     return (
         <div className="users">
             <div className="table">
-                <Table firstColumn='First Name' secondColumn='Last Name' thirdColumn='Age' fourthColumn='Email' fifthColumn='Password' data={users}/>
+                <Table column1='First Name' column2='Last Name' column3='Age' column4='Email' column5='Password' data={users}/>
             </div>
-            <button onClick={ () => createUser() }>create user</button>
+            <button className="create_button" onClick={ () => createUser() }>Create User</button>
         </div>
     );
 }

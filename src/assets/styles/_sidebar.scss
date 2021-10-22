@@ -1,0 +1,27 @@
+.sidebar {
+  width: 300px;
+  background-color: #333;
+  height: 100%;
+  ul {
+    padding: 0;
+    list-style-type: none;
+     li {
+       button {
+         display: block;
+         font-size: 18px;
+         font-weight: 300;
+         width: 100%;
+         background-color: transparent;
+         color: #fff;
+          border: none;
+         cursor: pointer;
+         text-align: left;
+         padding: 16px 24px;
+         transition: all .3s ease;
+         &:hover {
+           background-color: #5b5b5b;
+         }
+       }
+     }
+  }
+}
