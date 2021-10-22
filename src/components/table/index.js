@@ -18,6 +18,13 @@ const Table = ({column0, column1, column2, column3, column4, column5, data, getU
         getHomes();
     }
 
+    const editUser = (item) => {
+        history.push(`/user/edit/${item.id}`, {item});
+    }
+    const editHome = (item) => {
+        history.push(`/home/edit/${item.id}`, {item});
+    }
+
     return (
         <div className="table">
             <table width="100%">
@@ -47,7 +54,7 @@ const Table = ({column0, column1, column2, column3, column4, column5, data, getU
                                 <button onClick={ location === 'users' ? () => deleteUser(item.id) : () => deleteHome(item.id) }>
                                     <img src={DeleteIcon} alt=""/>
                                 </button>
-                                <button>
+                                <button onClick={ location === 'users' ? () => editUser(item) : () => editHome(item) }>
                                     <img src={EditIcon} alt=""/>
                                 </button>
                             </td>

@@ -1,23 +1,32 @@
 {
   "users": [
     {
-      "id": "1",
       "firstName": "Zhora",
       "lastName": "Torosyan",
-      "age": "27",
       "email": "zhora@gmail.com",
-      "password": "zhora123456"
+      "age": "27",
+      "password": "zhora123456",
+      "confirmPassword": "zhora123456",
+      "id": "1"
+    },
+    {
+      "id": "19e82f2d-6eb0-436a-8edf-12c2d7160a06",
+      "firstName": "Zhoraaaaa",
+      "lastName": "aaaaa",
+      "email": "aaaa",
+      "age": "aaaa",
+      "password": "aaaaa",
+      "confirmPassword": "aaaaaa"
     }
   ],
   "homes": [
     {
-      "id": "68697ea2-4d90-4463-b862-ff36389332ba",
-      "owner": "Zhora",
-      "title": "",
-      "location": "",
-      "land": "",
-      "place": "",
-      "bedroom": ""
+      "owner": "Zhoraaaaa",
+      "title": "assa",
+      "location": "dsadd",
+      "land": "asdsad",
+      "bedroom": "fsdfs",
+      "id": "68697ea2-4d90-4463-b862-ff36389332ba"
     }
   ]
 }
