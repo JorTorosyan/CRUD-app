@@ -19,7 +19,7 @@ const Validation = Yup.object().shape({
         .required('Required'),
     place: Yup.string()
         .required('Required'),
-    bedroom: Yup.string()
+    bedroom: Yup.number()
         .required('Required'),
 });
 

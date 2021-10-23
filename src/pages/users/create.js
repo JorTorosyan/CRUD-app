@@ -17,7 +17,7 @@ const Validation = Yup.object().shape({
         .max(50, 'Too Long!')
         .required('Required'),
     email: Yup.string().email('Invalid email').required('Required'),
-    age: Yup.string()
+    age: Yup.number()
         .required('Required'),
     password: Yup.string()
         .min(6, 'Password must be at least 6 charaters')
