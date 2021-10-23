@@ -1,36 +1,42 @@
-import React, {useState} from 'react';
+import React from 'react';
 import api from '../../api/config'
 import {useHistory} from "react-router-dom";
 import {useSelector} from "react-redux";
+import {Field, Form, Formik} from "formik";
+import {TextField} from "../../components/input";
+import * as Yup from "yup";
+
+const Validation = Yup.object().shape({
+    owner: Yup.string()
+        .required('Required'),
+    title: Yup.string()
+        .min(2, 'Too Short!')
+        .max(50, 'Too Long!')
+        .required('Required'),
+    location: Yup.string()
+        .required('Required'),
+    land: Yup.string()
+        .required('Required'),
+    place: Yup.string()
+        .required('Required'),
+    bedroom: Yup.string()
+        .required('Required'),
+});
+
 
 const EditHomes = () => {
     const history = useHistory();
     const allUsers = useSelector(state => state.global.users);
     const homeData = history?.location?.state?.item;
 
-    const [state, setState] = useState({
-        owner: homeData?.owner,
-        title: homeData?.title,
-        location: homeData?.location,
-        land: homeData?.land,
-        place: homeData?.homeData,
-        bedroom: homeData?.bedroom,
-    });
-    const handleChange = (evt) => {
-        const value = evt.target.value;
-        setState({
-            ...state,
-            [evt.target.name]: value,
-        });
-    };
-    const editHome = async () => {
+    const editHome = async (homeState) => {
         const data = {
-            owner: state.owner,
-            title: state.title,
-            location: state.location,
-            land: state.land,
-            place: state.place,
-            bedroom: state.bedroom,
+            owner: homeState.owner,
+            title: homeState.title,
+            location: homeState.location,
+            land: homeState.land,
+            place: homeState.place,
+            bedroom: homeState.bedroom,
         }
         const request = {
             ...data
@@ -44,62 +50,67 @@ const EditHomes = () => {
     return (
         <div className="form">
             <h3>Edit Home</h3>
-            <div>
-                <label>
-                    <select name="owner" onChange={handleChange}>
-                        <option value={homeData?.owner}>{homeData?.owner}</option>
-                        {allUsers && allUsers.map(user =>
-                            <option value={user.firstName} key={user.id}>{user.firstName}</option>
-                        )}
-                    </select>
-                </label>
-                <label>
-                    <input
-                        type="text"
-                        name="title"
-                        placeholder="Title"
-                        value={state.title}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>
-                    <input
-                        type="text"
-                        name="location"
-                        placeholder="Location"
-                        value={state.location}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>
-                    <input
-                        type="text"
-                        name="land"
-                        placeholder="Land"
-                        value={state.land}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>
-                    <input
-                        type="text"
-                        name="place"
-                        placeholder="Place"
-                        value={state.place}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>
-                    <input
-                        type="text"
-                        name="bedroom"
-                        placeholder="Bedrooms"
-                        value={state.bedroom}
-                        onChange={handleChange}
-                    />
-                </label>
-            </div>
-            <button className="create_button" onClick={ () => editHome() }>Edit</button>
+            <Formik
+                initialValues={{
+                    owner: homeData.owner,
+                    title: homeData.title,
+                    location: homeData.location,
+                    land: homeData.land,
+                    place: homeData.place,
+                    bedroom: homeData.bedroom
+                }}
+                validationSchema={Validation}
+                onSubmit={ (value) => editHome(value)}
+            >
+                <div>
+                    <Form>
+                        <label>
+                            <Field as="select" name="owner">
+                                <option value="">Select Owner</option>
+                                {allUsers && allUsers.map(user =>
+                                    <option value={user.firstName} key={user.id}>{user.firstName}</option>
+                                )}
+                            </Field>
+                        </label>
+                        <label>
+                            <TextField
+                                type="text"
+                                name="title"
+                                placeholder="Title"
+                            />
+                        </label>
+                        <label>
+                            <TextField
+                                type="text"
+                                name="location"
+                                placeholder="Location"
+                            />
+                        </label>
+                        <label>
+                            <TextField
+                                type="text"
+                                name="land"
+                                placeholder="Land"
+                            />
+                        </label>
+                        <label>
+                            <TextField
+                                type="text"
+                                name="place"
+                                placeholder="Place"
+                            />
+                        </label>
+                        <label>
+                            <TextField
+                                type="text"
+                                name="bedroom"
+                                placeholder="Bedrooms"
+                            />
+                        </label>
+                        <button className="create_button" type="submit">Create</button>
+                    </Form>
+                </div>
+            </Formik>
         </div>
     );
 }

@@ -8,7 +8,6 @@ const Homes = () => {
     const history = useHistory();
     const getHomes = async () => {
         const response = await api.get("/homes");
-        console.log("response",response);
         setHomes(response.data);
         return response.data;
     }

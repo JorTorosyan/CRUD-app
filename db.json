@@ -4,29 +4,66 @@
       "firstName": "Zhora",
       "lastName": "Torosyan",
       "email": "zhora@gmail.com",
-      "age": "27",
+      "age": "95",
       "password": "zhora123456",
       "confirmPassword": "zhora123456",
       "id": "1"
     },
     {
-      "id": "19e82f2d-6eb0-436a-8edf-12c2d7160a06",
-      "firstName": "Zhoraaaaa",
-      "lastName": "aaaaa",
-      "email": "aaaa",
-      "age": "aaaa",
-      "password": "aaaaa",
-      "confirmPassword": "aaaaaa"
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "john@mail.com",
+      "age": "25",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "id": "d06587d6-54ac-488b-a716-bcef31085eed"
+    },
+    {
+      "id": "9185c5dd-37ae-4e76-88f9-2536f563b63e",
+      "firstName": "Ann",
+      "lastName": "Anderson",
+      "email": "anderson@gmail.com",
+      "age": "32",
+      "password": "asdfgh",
+      "confirmPassword": "asdfgh"
     }
   ],
   "homes": [
     {
-      "owner": "Zhoraaaaa",
-      "title": "assa",
+      "owner": "Zhora",
+      "title": "sas",
       "location": "dsadd",
-      "land": "asdsad",
+      "land": "dsdasads",
+      "place": "sdasas",
       "bedroom": "fsdfs",
       "id": "68697ea2-4d90-4463-b862-ff36389332ba"
+    },
+    {
+      "owner": "John",
+      "title": "aaa",
+      "location": "aaaa",
+      "land": "dasdasd",
+      "place": "sadasdsads",
+      "bedroom": "sadasd",
+      "id": "fdd66805-a0f3-44c2-b3a5-3723f813ce2d"
+    },
+    {
+      "id": "764834f3-431b-4dca-a36d-741873be5889",
+      "owner": "green",
+      "title": "dsadasdsa",
+      "location": "dsaddsa",
+      "land": "dsadsad",
+      "place": "sadas",
+      "bedroom": "dsad"
+    },
+    {
+      "owner": "Ann",
+      "title": "dsadsad",
+      "location": "dsadsad",
+      "land": "dsadasd",
+      "place": "dsadsd",
+      "bedroom": "sadsadsadas",
+      "id": "028baed1-c249-4448-a83f-16efda92fb81"
     }
   ]
 }
